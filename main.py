@@ -24,7 +24,7 @@ df.to_excel(r'S:\EMEA\Kontrollabfragen\MPS_Reminder.xlsx', index= False)
 
 def send_mail():
 
-    receivers = ['jackyshen@wanziltd.com','ramonashen@wanziltd.com']
+    receivers = ['jackyshen@wanziltd.com','ramonashen@wanziltd.com','daisyshen@wanziltd.com']
     cc = ['yian.su@emea-cosmetics.com','christoph.razek@emea-cosmetics.com','dzanana.dautefendic@emea-cosmetics.com']
 
     #creating an win32 object/mail object
