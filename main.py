@@ -24,8 +24,8 @@ df.to_excel(r'S:\EMEA\Kontrollabfragen\MPS_Reminder.xlsx', index= False)
 
 def send_mail():
 
-    receivers = ['yian.su@emea-cosmetics.com']
-    cc = ['christoph.razek@emea-cosmetics.com','dzanana.dautefendic@emea-cosmetics.com']
+    receivers = ['jackyshen@wanziltd.com','ramonashen@wanziltd.com']
+    cc = ['yian.su@emea-cosmetics.com','christoph.razek@emea-cosmetics.com','dzanana.dautefendic@emea-cosmetics.com']
 
     #creating an win32 object/mail object
     outlook = win32.Dispatch('outlook.application')
