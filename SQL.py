@@ -3,10 +3,10 @@ offene_MPS = """SELECT  BELEGNR as 'PO',
 		BEZEICHNUNG as 'ArticleDescription', 
 		LIEFERDATUM as 'Delivery Date',
 	    DATEDIFF(day, GETDATE(),[LIEFERDATUM]) 'Days before Delivery Date',
-		PE14_SampleReceived as 'MPS Received'
+		LIEFERANTENNR
 
   FROM [emea_enventa_live].[dbo].[BESTELLPOS]
-  where LIEFERANTENNR = 70053 --definiere welche Lieferanten
+  where BELEGART in (2,191) --nur PM bzw. AsienFW
   and status = 1 -- nur offene Bestellungen
   and DATEDIFF(day, GETDATE(),[LIEFERDATUM]) < 14 --erinnerung X Tage vor Lieferdatum
   and PE14_SampleReceived is null
