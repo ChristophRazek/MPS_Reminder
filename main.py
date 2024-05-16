@@ -32,7 +32,7 @@ def send_mail(email_contacts):
     您好，<br>
     請盡快寄出MPS。若有任何問題，請提前通知，謝謝。 
     </font>"""
-    mail.Attachments.Add(rf'S:\EMEA\Kontrollabfragen\MPS\MPS_Reminder_{i}.xlsx')
+    mail.Attachments.Add(rf'S:\EMEA\Kontrollabfragen\MPS\MPS_Reminder_{i}_{today}.xlsx')
 
     mail.Display()
     mail.Save()
@@ -54,17 +54,17 @@ for i in receiver:
 
     df_mail = df[df['LIEFERANTENNR'] == i]
     df_mail.drop('LIEFERANTENNR', axis=1, inplace=True)
-    df_mail.to_excel(rf'S:\EMEA\Kontrollabfragen\MPS\MPS_Reminder_{i}.xlsx', index= False)
+    df_mail.to_excel(rf'S:\EMEA\Kontrollabfragen\MPS\MPS_Reminder_{i}_{today}.xlsx', index= False)
     if df_mail.shape[0] != 0:
         send_mail(receiver[i])
 
 
 
-"""#Email nur senden wenn Liefertermin innerhalb des Zeitfensters
+#Email nur senden wenn Liefertermin innerhalb des Zeitfensters
 if df.shape[0] == 0:
     with open(r'S:\EMEA\Kontrollabfragen\MPS_Reminder.txt','w') as file:
         file.write(f'Keine MPS Erinnerung da am {today} keine Liefertermine innerhalb des Zeitfensters!')
 else:
-    send_mail()
+    #send_mail()
     with open(r'S:\EMEA\Kontrollabfragen\MPS_Reminder.txt','w') as file:
-        file.write(f'MPS Reminder wurde zuletzt am {today} verschickt!')"""
+        file.write(f'MPS Reminder wurde zuletzt am {today} verschickt!')
