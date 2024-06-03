@@ -70,6 +70,8 @@ for i in receiver:
 if df.shape[0] == 0:
     with open(r'S:\EMEA\Kontrollabfragen\MPS_Reminder.txt','a') as file:
         file.write(f'\nKeine MPS Erinnerung da am {today} keine Liefertermine innerhalb des Zeitfensters!')
+        file.close()
 else:
     with open(r'S:\EMEA\Kontrollabfragen\MPS_Reminder.txt','a') as file:
         file.write(f'\nMPS Reminder wurde zuletzt am {today} verschickt!')
+        file.close()
