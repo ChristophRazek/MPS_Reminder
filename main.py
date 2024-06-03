@@ -29,14 +29,20 @@ def send_mail(email_contacts):
     If you have any questions please feel free to contact me (yian.su@emea-cosmetics.com).<br><br>
     Thank you and kind regards.<br>
     <br>
-    您好，<br>
-    請盡快寄出MPS。若有任何問題，請提前通知，謝謝。 
+    Yi-An Su<br> 
+    Quality Management<br>
+
+    <br>emea Handelsgesellschaft mbH<br>
+    Brucknerstraße 8/5<br>
+    A-1040 Wien<br>
+    Tel.:    +43 1 535 10 01 - 232<br>
+    Fax:    +43 1 535 10 01 - 900<br>
     </font>"""
     mail.Attachments.Add(rf'S:\EMEA\Kontrollabfragen\MPS\MPS_Reminder_{i}_{today}.xlsx')
 
     mail.Display()
     mail.Save()
-    # mail.Send()
+    mail.Send()
 
 #Datenbankverbindung
 connx_string = r'DRIVER={SQL Server}; server=172.19.128.2\emeadb; database=emea_enventa_live; UID=usr_razek; PWD=wB382^%H3INJ'
@@ -62,9 +68,8 @@ for i in receiver:
 
 #Email nur senden wenn Liefertermin innerhalb des Zeitfensters
 if df.shape[0] == 0:
-    with open(r'S:\EMEA\Kontrollabfragen\MPS_Reminder.txt','w') as file:
-        file.write(f'Keine MPS Erinnerung da am {today} keine Liefertermine innerhalb des Zeitfensters!')
+    with open(r'S:\EMEA\Kontrollabfragen\MPS_Reminder.txt','a') as file:
+        file.write(f'\nKeine MPS Erinnerung da am {today} keine Liefertermine innerhalb des Zeitfensters!')
 else:
-    #send_mail()
-    with open(r'S:\EMEA\Kontrollabfragen\MPS_Reminder.txt','w') as file:
-        file.write(f'MPS Reminder wurde zuletzt am {today} verschickt!')
+    with open(r'S:\EMEA\Kontrollabfragen\MPS_Reminder.txt','a') as file:
+        file.write(f'\nMPS Reminder wurde zuletzt am {today} verschickt!')
