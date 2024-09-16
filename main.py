@@ -12,7 +12,7 @@ today = date.today()
 
 def send_mail(email_contacts):
     receivers = email_contacts
-    cc = ['yian.su@emea-cosmetics.com', 'christoph.razek@emea-cosmetics.com', 'dzanana.dautefendic@emea-cosmetics.com']
+    cc = ['yian.su@emea-cosmetics.com', 'christoph.razek@emea-cosmetics.com', 'dzanana.dautefendic@emea-cosmetics.com', 'elham.fanaeedanesh@emea-cosmetics.com']
 
     # creating an win32 object/mail object
     outlook = win32.Dispatch('outlook.application')
