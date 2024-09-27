@@ -1,5 +1,5 @@
 
-contacts = {70053: ['jackyshen@wanziltd.com','ramonashen@wanziltd.com','daisyshen@wanziltd.com'],
+contacts = {70053: ['jackyshen@wanziltd.com','ramonashen@wanziltd.com','daisyshen@wanziltd.com','evatang@wanziltd.com'],
             70005: ['corrine.lo@beautymarkltd.com', 'kate.shih@beautymarkltd.com'],
             70047: ['carrie@alltagroup.com', 'miky.guo@alltagroup.com'],
             70065: ['f.schilling@bakic.com', 'c.weinzierl@bakic.com'],
