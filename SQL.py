@@ -5,7 +5,7 @@ offene_MPS = """SELECT  BELEGNR as 'PO',
 	    DATEDIFF(day, GETDATE(),[LIEFERDATUM]) 'Days before Delivery Date',
 		LIEFERANTENNR
 
-  FROM [emea_enventa_live].[dbo].[BESTELLPOS]
+  FROM [emea_enventa_live45].[dbo].[BESTELLPOS]
   where BELEGART in (2,191) --nur PM bzw. AsienFW
   and status = 1 -- nur offene Bestellungen
   and DATEDIFF(day, GETDATE(),[LIEFERDATUM]) < 14 --erinnerung X Tage vor Lieferdatum
