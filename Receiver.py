@@ -6,6 +6,6 @@ contacts = {70053: ['jackyshen@wanziltd.com','ramonashen@wanziltd.com','daisyshe
             70063: ['sarah.su@yuanharng.com', 'tina.cao@yuanharng.com'],
             70085: ['monica.liu@micentech.com', 'elmer@micentech.com'],
             70072: ['bonnie@efapack.com', 'patty@efapack.com','francesca@efapack.com'],
-            70054: ['han@beautypr.net', 'jiwoo@beautypr.net', 'yong@beautypr.net', 'doori@beautypr.net'],
+            70054: ['han@beautypr.net', 'yong@beautypr.net', 'doori@beautypr.net','serena@beautypr.net','sue@beautypr.net'],
             70089: ['heidi@topfeelgroup.com', 'yian.su@emea-cosmetics.com'],
             70049: ['vbonazza@ancorotticosmetics.com', 'abrambini@ancorotticosmetics.com', 'smonticelli@ancorotticosmetics.com']}
