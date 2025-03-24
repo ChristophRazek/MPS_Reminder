@@ -22,7 +22,7 @@ try:
     logging.info(f"Aktuelles Datum: {date.today()}")
     logging.info("Starte Datenbankabfrage...")
 
-    def send_mail(email_contacts):
+    def send_mail(email_contacts, filepath):
         receivers = email_contacts
         cc = ['yian.su@emea-cosmetics.com', 'dzanana.dautefendic@emea-cosmetics.com', 'elham.fanaeedanesh@emea-cosmetics.com']
 
@@ -71,14 +71,20 @@ try:
     for i in receiver:
 
         df_mail = df[df['LIEFERANTENNR'] == i]
-        df_mail.drop('LIEFERANTENNR', axis=1, inplace=True)
-        df_mail.to_excel(rf'S:\EMEA\Kontrollabfragen\MPS\MPS_Reminder_{i}_{today}.xlsx', index= False)
+
         if df_mail.shape[0] != 0:
-            send_mail(receiver[i])
-            logging.info(f"Reminder versendet an {i}")
+            df_mail.drop('LIEFERANTENNR', axis=1, inplace=True)
+
+            filepath = rf'C:\Users\Backup\OneDrive - Emea\Desktop\Log\MPS_Datenaustausch\MPS_Reminder_{i}_{today}.xlsx'
+            df_mail.to_excel(filepath, index=False)
+
+            send_mail(receiver[i], filepath)
+            logging.info(f"Reminder versendet an Lieferant {i}")
+        else:
+            logging.info(f"Keine offenen MPS fuer Lieferant {i}")
 
     if df.shape[0] == 0:
-        logging.info(f"Keine MPS Erinnerung da am {today} keine Liefertermine innerhalb des Zeitfensters!")
+        logging.info(f"Keine MPS Erinnerung da am {today} keine Liefertermine innerhalb des Zeitfensters vorlagen!")
 
 
 except Exception as e:
