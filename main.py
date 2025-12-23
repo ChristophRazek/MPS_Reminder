@@ -12,7 +12,7 @@ today = date.today()
 
 # Logging konfigurieren
 logging.basicConfig(
-    filename=r'C:\Users\Backup\OneDrive - Emea\Desktop\Log\mps_reminder_script.log',  # Pfad zur Logdatei
+    filename=r'L:\Datenaustausch\Log\mps_reminder_script.log',  # Pfad zur Logdatei
     level=logging.INFO,                       # Log-Level: INFO, DEBUG, ERROR, ...
     format='%(asctime)s - %(levelname)s - %(message)s'  # Format der Logzeilen
     )
@@ -24,7 +24,7 @@ try:
 
     def send_mail(email_contacts, filepath):
         receivers = email_contacts
-        cc = ['yian.su@emea-cosmetics.com', 'dzanana.dautefendic@emea-cosmetics.com', 'elham.fanaeedanesh@emea-cosmetics.com']
+        cc = ['ivana.mickovic@emea-cosmetics.com','christian.cisar@emea-cosmetics.com', 'dzanana.dautefendic@emea-cosmetics.com']
 
         # creating an win32 object/mail object
         outlook = win32.Dispatch('outlook.application')
@@ -50,7 +50,8 @@ try:
         Tel.:    +43 1 535 10 01 - 232<br>
         Fax:    +43 1 535 10 01 - 900<br>
         </font>"""
-        mail.Attachments.Add(rf'S:\EMEA\Kontrollabfragen\MPS\MPS_Reminder_{i}_{today}.xlsx')
+        #mail.Attachments.Add(rf'S:\EMEA\Kontrollabfragen\MPS\MPS_Reminder_{i}_{today}.xlsx')
+        mail.Attachments.Add(rf'L:\Datenaustausch\MPS\MPS_Reminder_{i}_{today}.xlsx')
 
         mail.Display()
         mail.Save()
@@ -75,7 +76,7 @@ try:
         if df_mail.shape[0] != 0:
             df_mail.drop('LIEFERANTENNR', axis=1, inplace=True)
 
-            filepath = rf'C:\Users\Backup\OneDrive - Emea\Desktop\Log\MPS_Datenaustausch\MPS_Reminder_{i}_{today}.xlsx'
+            filepath = rf'L:\Datenaustausch\MPS\MPS_Reminder_{i}_{today}.xlsx'
             df_mail.to_excel(filepath, index=False)
 
             send_mail(receiver[i], filepath)
