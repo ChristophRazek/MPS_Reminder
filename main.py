@@ -41,13 +41,13 @@ try:
         If you have any questions please feel free to contact me (yian.su@emea-cosmetics.com).<br><br>
         Thank you and kind regards.<br>
         <br>
-        Yi-An Su<br> 
-        Quality Management<br>
+        Dipl. Ing. Ivana Mickovic<br> 
+        Junior Quality Manager<br>
     
         <br>emea Handelsgesellschaft mbH<br>
         Brucknerstraße 8/5<br>
         A-1040 Wien<br>
-        Tel.:    +43 1 535 10 01 - 232<br>
+        Tel.:    +43 1 535 10 01 - 237<br>
         Fax:    +43 1 535 10 01 - 900<br>
         </font>"""
         #mail.Attachments.Add(rf'S:\EMEA\Kontrollabfragen\MPS\MPS_Reminder_{i}_{today}.xlsx')
