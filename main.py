@@ -24,7 +24,7 @@ try:
 
     def send_mail(email_contacts, filepath):
         receivers = email_contacts
-        cc = ['ivana.mickovic@emea-cosmetics.com','christian.cisar@emea-cosmetics.com', 'dzanana.dautefendic@emea-cosmetics.com']
+        cc = ['ivana.mickovic@emea-cosmetics.com','christian.cisar@emea-cosmetics.com', 'Tina.Jagschitz@emea-cosmetics.com']
 
         # creating an win32 object/mail object
         outlook = win32.Dispatch('outlook.application')
