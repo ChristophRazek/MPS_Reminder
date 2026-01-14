@@ -43,6 +43,7 @@ try:
         <br>
         Dipl. Ing. Ivana Mickovic<br> 
         Junior Quality Manager<br>
+        ivana.mickovic@emea-cosmetics.com <br>
     
         <br>emea Handelsgesellschaft mbH<br>
         Brucknerstraße 8/5<br>
