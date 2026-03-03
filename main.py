@@ -24,7 +24,7 @@ try:
 
     def send_mail(email_contacts, filepath):
         receivers = email_contacts
-        cc = ['ivana.mickovic@emea-cosmetics.com','christian.cisar@emea-cosmetics.com', 'Tina.Jagschitz@emea-cosmetics.com']
+        cc = ['ivana.mickovic@emea-cosmetics.com','christian.cisar@emea-cosmetics.com', 'Tina.Jagschitz@emea-cosmetics.com', 'sandra.pimpel@emea-cosmetics.com']
 
         # creating an win32 object/mail object
         outlook = win32.Dispatch('outlook.application')
@@ -36,9 +36,12 @@ try:
         mail.Subject = f'MPS Reminder'
         mail.HTMLBody = """<font face='Calibri, Calibri, monospace'>
         Good Day, <br><br>
+        
+        This is an automatic message, please do not responde to this email!
+        
         Please send us Mass Production Samples (MPS) in the list attached as the delivery dates will soon be reached.<br>
         In case there are problems, please inform us as soon as possible.<br>
-        If you have any questions please feel free to contact me (yian.su@emea-cosmetics.com).<br><br>
+        If you have any questions please feel free to contact me (ivana.mickovic@emea-cosmetics.com).<br><br>
         Thank you and kind regards.<br>
         <br>
         Dipl. Ing. Ivana Mickovic<br> 
