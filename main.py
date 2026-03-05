@@ -41,17 +41,17 @@ try:
         
         Please send us Mass Production Samples (MPS) in the list attached as the delivery dates will soon be reached.<br>
         In case there are problems, please inform us as soon as possible.<br>
-        If you have any questions please feel free to contact me (ivana.mickovic@emea-cosmetics.com).<br><br>
+        If you have any questions please feel free to contact me (sandra.pimpel@emea-cosmetics.com).<br><br>
         Thank you and kind regards.<br>
         <br>
-        Dipl. Ing. Ivana Mickovic<br> 
-        Junior Quality Manager<br>
-        ivana.mickovic@emea-cosmetics.com <br>
+        Sandra Pimpel<br> 
+        Quality Manager<br>
+        sandra.pimpel@emea-cosmetics.com <br>
     
         <br>emea Handelsgesellschaft mbH<br>
         Brucknerstraße 8/5<br>
         A-1040 Wien<br>
-        Tel.:    +43 1 535 10 01 - 237<br>
+        Tel.:    +43 1 535 10 01 - 268<br>
         Fax:    +43 1 535 10 01 - 900<br>
         </font>"""
         #mail.Attachments.Add(rf'S:\EMEA\Kontrollabfragen\MPS\MPS_Reminder_{i}_{today}.xlsx')
